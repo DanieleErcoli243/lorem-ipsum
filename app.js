@@ -29,4 +29,10 @@ form.addEventListener('submit', e => {
   // ricavo il valore dall'input e lo trasformo in un numero
   const value = parseInt(amount.value);
 
+  // stabilisco alcune condizioni per controllare e gestire il valore dell'input
+
+  if (isNaN(value) || value < 0 || value > 9) {
+    article.innerHTML = `<p class="result">${text[0]}<p>`
+  };
+
 })
