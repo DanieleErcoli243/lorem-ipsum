@@ -12,6 +12,9 @@ I just told you! You've killed me! Fry! Quit doing the right thing, you jerk! Mi
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ];
 
+// creo due variabili per i valori minimo e massimo
+const min = 0;
+const max = 9;
 
 // seleziono gli elementi dal DOM
 
@@ -28,6 +31,8 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   // ricavo il valore dall'input e lo trasformo in un numero
   const value = parseInt(amount.value);
+  // genero un numero casuale come indice per estrarre il paragrafo
+  const randomNumber = Math.floor(Math.random() * (max + 1 - min) + min);
 
   // stabilisco alcune condizioni per controllare e gestire il valore dell'input
 
