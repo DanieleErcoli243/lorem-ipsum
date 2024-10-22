@@ -42,9 +42,10 @@ form.addEventListener('submit', e => {
   } else {
     // unisco il primo paragrafo ad eventuali altri col numero casuale
     let tempText = text.slice(0, value);
+    // uso il metodo map per aggiungere a tutti i paragrafi il template literal
+    tempText = tempText.map(p => `<p class="result">${p}<p>`).join('');
     // inietto il paragrafo nel campo
-    article.innerHTML = `<p class="result">${tempText}<p>`
-
-  }
+    article.innerHTML = tempText;
+  };
 
 })
