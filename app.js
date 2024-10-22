@@ -26,5 +26,7 @@ const article = document.querySelector('.lorem-text');
 form.addEventListener('submit', e => {
   // impedisco il normale invio del form
   e.preventDefault();
+  // ricavo il valore dall'input e lo trasformo in un numero
+  const value = parseInt(amount.value);
 
 })
