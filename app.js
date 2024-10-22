@@ -37,7 +37,14 @@ form.addEventListener('submit', e => {
   // stabilisco alcune condizioni per controllare e gestire il valore dell'input
 
   if (isNaN(value) || value < 0 || value > 9) {
+    // inietto un paragrafo casuale nel campo
     article.innerHTML = `<p class="result">${text[randomNumber]}<p>`
-  };
+  } else {
+    // unisco il primo paragrafo ad eventuali altri col numero casuale
+    let tempText = text.slice(0, value);
+    // inietto il paragrafo nel campo
+    article.innerHTML = `<p class="result">${tempText}<p>`
+
+  }
 
 })
