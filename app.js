@@ -21,3 +21,10 @@ const amount = document.getElementById('amount');
 
 const article = document.querySelector('.lorem-text');
 
+// aggancio un ascoltatore di eventi al form
+
+form.addEventListener('submit', e => {
+  // impedisco il normale invio del form
+  e.preventDefault;
+
+})
